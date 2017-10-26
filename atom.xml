@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>zuhai的博客</title>
+  <icon>https://www.gravatar.com/avatar/f5d0f167c79010d124ae24deafbb1205</icon>
+  <subtitle>胆小认生，不易相处</subtitle>
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="http://yoursite.com/"/>
+  <updated>2017-10-26T15:57:14.452Z</updated>
+  <id>http://yoursite.com/</id>
+  
+  <author>
+    <name>Zuhai</name>
+    <email>475981319@qq.com</email>
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Hello</title>
+    <link href="http://yoursite.com/2017/10/27/hello-world/"/>
+    <id>http://yoursite.com/2017/10/27/hello-world/</id>
+    <published>2017-10-26T17:29:18.279Z</published>
+    <updated>2017-10-26T15:57:14.452Z</updated>
+    
+    <content type="html"><![CDATA[<p>欢迎大家来到这里。</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;欢迎大家来到这里。&lt;/p&gt;
+
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+</feed>
