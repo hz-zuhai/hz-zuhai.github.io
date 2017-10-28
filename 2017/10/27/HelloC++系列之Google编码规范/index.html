@@ -8,17 +8,17 @@
   <link rel="dns-prefetch" href="https://github.com/hz-zuhai">
   <title>Hello C++系列之Google C++编程规范 | Zuhai的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="前言 本文面向刚入门学习C++的童鞋，老鸟们可选择性绕路。 在学习新的一门语言时，首先要了解这门语言相关规范，给自己脑子里留下印象。在今后编码过程中不断的实践并加深印象，从而形成一种习惯。 为什么选择Google C++编程规范呢？ 引用李开复先生曾对它的评价：“我认为这是地球上最好的一份C++编程规范,没有之一,建议广大国内外IT研究使用。” 那么接下来我会结合自己多年的编程经验，重新对它认识！">
+  <meta name="description" content="前言 本文面向刚入门学习C++的童鞋，老鸟们可选择性绕路。 在学习新的一门语言时，首先要了解这门语言相关规范，给自己脑子里留下印象。在今后编码过程中不断的实践并加深印象，从而形成一种习惯。 为什么选择Google C++编程规范呢？ 引用李开复先生曾对它的评价：“我认为这是地球上最好的一份C++编程规范,没有之一,建议广大国内外IT研究使用。” 那么接下来我们一起认识它吧！">
 <meta name="keywords" content="C&#x2F;C++,Google">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Hello C++系列之Google C++编程规范">
 <meta property="og:url" content="https://github.com/hz-zuhai/2017/10/27/HelloC++系列之Google编码规范/index.html">
 <meta property="og:site_name" content="Zuhai的博客">
-<meta property="og:description" content="前言 本文面向刚入门学习C++的童鞋，老鸟们可选择性绕路。 在学习新的一门语言时，首先要了解这门语言相关规范，给自己脑子里留下印象。在今后编码过程中不断的实践并加深印象，从而形成一种习惯。 为什么选择Google C++编程规范呢？ 引用李开复先生曾对它的评价：“我认为这是地球上最好的一份C++编程规范,没有之一,建议广大国内外IT研究使用。” 那么接下来我会结合自己多年的编程经验，重新对它认识！">
-<meta property="og:updated_time" content="2017-10-27T14:19:00.986Z">
+<meta property="og:description" content="前言 本文面向刚入门学习C++的童鞋，老鸟们可选择性绕路。 在学习新的一门语言时，首先要了解这门语言相关规范，给自己脑子里留下印象。在今后编码过程中不断的实践并加深印象，从而形成一种习惯。 为什么选择Google C++编程规范呢？ 引用李开复先生曾对它的评价：“我认为这是地球上最好的一份C++编程规范,没有之一,建议广大国内外IT研究使用。” 那么接下来我们一起认识它吧！">
+<meta property="og:updated_time" content="2017-10-28T04:33:27.214Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hello C++系列之Google C++编程规范">
-<meta name="twitter:description" content="前言 本文面向刚入门学习C++的童鞋，老鸟们可选择性绕路。 在学习新的一门语言时，首先要了解这门语言相关规范，给自己脑子里留下印象。在今后编码过程中不断的实践并加深印象，从而形成一种习惯。 为什么选择Google C++编程规范呢？ 引用李开复先生曾对它的评价：“我认为这是地球上最好的一份C++编程规范,没有之一,建议广大国内外IT研究使用。” 那么接下来我会结合自己多年的编程经验，重新对它认识！">
+<meta name="twitter:description" content="前言 本文面向刚入门学习C++的童鞋，老鸟们可选择性绕路。 在学习新的一门语言时，首先要了解这门语言相关规范，给自己脑子里留下印象。在今后编码过程中不断的实践并加深印象，从而形成一种习惯。 为什么选择Google C++编程规范呢？ 引用李开复先生曾对它的评价：“我认为这是地球上最好的一份C++编程规范,没有之一,建议广大国内外IT研究使用。” 那么接下来我们一起认识它吧！">
   
     <link rel="alternative" href="/atom.xml" title="Zuhai的博客" type="application/atom+xml">
   
@@ -165,7 +165,7 @@
 <p>本文面向刚入门学习C++的童鞋，老鸟们可选择性绕路。</p>
 <p>在学习新的一门语言时，首先要了解这门语言相关规范，给自己脑子里留下印象。在今后编码过程中不断的实践并加深印象，从而形成一种习惯。</p>
 <p>为什么选择Google C++编程规范呢？ 引用李开复先生曾对它的评价：“我认为这是地球上最好的一份C++编程规范,没有之一,建议广大国内外IT研究使用。”</p>
-<p>那么接下来我会结合自己多年的编程经验，重新对它认识！</p>
+<p>那么接下来我们一起认识它吧！</p>
 <a id="more"></a>
 <p><strong>头文件</strong></p>
 <p>实际项目中常应用到如下几点规则:</p>
@@ -176,19 +176,19 @@
 <p>内联函数不常使用，-inl.h也先滤过。</p>
 <p><strong>作用域</strong></p>
 <ol>
-<li>namespace</li>
+<li><p>namespace</p>
+<p>​1) 不具名命名空间</p>
+<p>​2) 具名命名空间</p>
+</li>
 </ol>
-<p>​    1) 不具名命名空间</p>
-<p>​    2) 具名命名空间</p>
 <p>优点：两个不同项目的全局作用域都有一个类 CHello，这样在编译或运行时造成冲突。如 果每个项目将代码置于不同命名空间中，project1::CHello 和 project2::CHello 作为不同符号 自然不会冲突。</p>
 <p><em>建议</em>：合理使用命名空间。小项目不需要使用。</p>
 <figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//hello.h</span></div><div class="line"><span class="meta">#<span class="meta-keyword">ifndef</span> HELLOGOOGLE_HELLO_H_</span></div><div class="line"><span class="meta">#<span class="meta-keyword">define</span> HELLOGOOGLE_HELLO_H_</span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;sys/types.h&gt; 	//c系统文件</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;unistd.h&gt;		//c++系统文件</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;vector&gt; 		//其他库文件</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">"base/base.h"</span>	<span class="comment">//本项目内头文件</span></span></div><div class="line"></div><div class="line"><span class="keyword">namespace</span> hellogoogle&#123;</div><div class="line">  <span class="class"><span class="keyword">class</span> <span class="title">CHello</span>&#123;</span></div><div class="line">  <span class="keyword">public</span>:</div><div class="line">    <span class="function"><span class="keyword">void</span> <span class="title">printHello</span><span class="params">(IN <span class="keyword">int</span> count, OUT <span class="keyword">int</span> *times)</span></span>;</div><div class="line">&#125;;<span class="comment">//hello</span></div><div class="line">&#125;<span class="comment">//hellogoogle</span></div><div class="line"></div><div class="line"><span class="meta">#<span class="meta-keyword">endif</span> <span class="comment">//HELLOGOOGLE_HELLO_H_</span></span></div></pre></td></tr></table></figure>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//hello.cpp</span></div><div class="line"><span class="keyword">namespace</span> hellogoogle&#123;</div><div class="line">  <span class="keyword">void</span> CHello::printHello(IN <span class="keyword">int</span> count, OUT <span class="keyword">int</span> *times)&#123;</div><div class="line">  <span class="comment">//...</span></div><div class="line">&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <ul>
-<li>嵌套类</li>
-</ul>
-<p>​    不常使用，不在这里阐述。</p>
-<ul>
+<li><p>嵌套类</p>
+<p>​不常使用，不在这里阐述。</p>
+</li>
 <li><p>函数</p>
 <p>非成员函数 </p>
 <p>静态成员函数：单例类</p>
