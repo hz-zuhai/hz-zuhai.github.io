@@ -16,7 +16,7 @@
 <meta property="og:site_name" content="Zuhai的博客">
 <meta property="og:description" content="前世今生 在38年前(1979年)，一名刚获得博士学位的研究员，为了开发一个软件项目发明了一门新编程语言，该研究员名为Bjarne Stroustrup，该门语言则命名为——C with classes，四年后改称为C++。C++是一门通用编程语言，支持多种编程范式，包括过程式、面向对象(object-oriented programming, OP)、泛型(generic programming">
 <meta property="og:image" content="https://github.com/assets/blogImg/topc.jpg">
-<meta property="og:updated_time" content="2017-10-28T12:27:46.418Z">
+<meta property="og:updated_time" content="2017-10-29T03:01:55.963Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="为什么学习C++">
 <meta name="twitter:description" content="前世今生 在38年前(1979年)，一名刚获得博士学位的研究员，为了开发一个软件项目发明了一门新编程语言，该研究员名为Bjarne Stroustrup，该门语言则命名为——C with classes，四年后改称为C++。C++是一门通用编程语言，支持多种编程范式，包括过程式、面向对象(object-oriented programming, OP)、泛型(generic programming">
@@ -168,24 +168,25 @@
 <p><strong>开发语言市场占比</strong></p>
 <p>TIOBE 最近公布了 2017 年 5 月编程语言指数排行榜，排名前三的是 Java、C、C++。</p>
 <p><img src="/assets/blogImg/topc.jpg" alt="编程语言排行榜"></p>
-<p><em>注意</em> : 这将直接影响你的就业空间以及在你入门时获得帮助的资源。也同时反映了一门语言的生命力。</p>
+<p>注意* :   这将直接影响你的就业空间以及在你入门时获得帮助的资源。也同时反映了一门语言的生命力。</p>
 <a id="more"></a>
-<p><strong>选择C++</strong></p>
-<p>C++并非万能丹，我按经验举出一些C++的适用时机。</p>
+<p><strong>C++就业前景</strong></p>
+<p>在国内目前最火的还是C++软件工程师和JAVA软件工程师，但是C++人才需求有别与JAVA正面临着“有人没活干，有活没人干”的局面。而造成这个尴尬局面的原因可能是：</p>
 <ol>
-<li>C++适合构造程序中需求较稳定的部分，需求变化较大的部分可使用脚本语言；</li>
-<li>程序须尽量发挥硬件的最高性能，且性能瓶颈在于CPU和内存；</li>
-<li>程序须频繁地与操作系统或硬件沟通；</li>
-<li>程序必须使用C++框架/库，如大部分游戏引擎(如Unreal/Source)及中间件(如Havok/FMOD)，虽然有些C++库提供其他语言的绑定，但通常原生的API性能最好、最新；</li>
-<li>项目中某个目标平台只提供C++编译器的支持。</li>
+<li>市面C++的系统化培训机构比较少，基本靠自学。</li>
+<li>C++入门较难。</li>
 </ol>
-<p>按应用领域来说，C++适用于开发服务器软件、桌面应用、游戏、实时系统、高性能计算、嵌入式系统等。</p>
-<p><strong>一些优点</strong></p>
-<p> 相对运行于虚拟机语言(如C#/Java)，C/C++直接以静态形式把源程序编译为目标平台的机器码。一般而言，C/C++程序在编译及链接时可进行的优化最丰富，启动时的速度最快，运行时的额外内存开销最少。而C/C++相对动态语言(如Python/Lua)也减少了运行时的动态类型检测。此外，C/C++的运行行为是确定的，且不会有额外行为(例如C#/Java必然会初始化变量)，也不会有如垃圾收集(GC)而造成的不确定性延迟，而且C/C++的数据结构在内存中的布局也是确定的。有时C++的一些功能会使程序性能优于C，当中以内联和模版最为突出，这两项功能使C++标准库的sort()通常比C标准库的qsort()<a href="http://en.wikipedia.org/wiki/Sort_(C%2B%2B" target="_blank" rel="external">快多倍</a>#Comparison_to_qsort.28.29)(C可用宏或人手编码去解决此问题)。另一方面，C/C++能直接映射机器码，之间没有另一层中间语言，因此可以做底层优化，例如使用内部(intrinsic)函数和嵌入汇编语言。然而，许多C++的性能优点并非免费午餐，代价包括较长的编译链接时间和较易出错，因而增加开发时间和成本。</p>
+<p>反映在薪资上C/C++软件工程师的年薪与JAVA软件工程师和.NET软件工程师的年薪相比一般平均要高。</p>
+<p><strong>行业</strong></p>
+<p>C++在很多行业应用广泛：网络、通讯、图像、游戏、桌面等，它也是目前唯一适应多方面需求的编程语言。</p>
+<p>业内也流程这么一句话：<em>没有学过C++就不是真正的程序员,没有掌握C++编程技术就等于没有抓住通向国际一流企业</em></p>
+<p><strong>优点缺点</strong></p>
+<p>每一门语言的产生都有它历史存在的意义。同时也会伴随着局限性。</p>
+<p>C++的优点是灵活，但同时也是缺点，因为灵活而缺乏强制性标准，对从业者自身的素质要求提供了。</p>
 <p><strong>相关资源</strong></p>
 <p>Herb Sutter的演讲<a href="https://channel9.msdn.com/posts/C-and-Beyond-2011-Herb-Sutter-Why-C" target="_blank" rel="external">why c++</a></p>
 <p><strong>帮助</strong></p>
-<p>可以关注我的<a href="http://weibo.com/p/1005052707356725" target="_blank" rel="external">微博</a>进行留言。</p>
+<p>我会陆续更新C++相关文章，可以关注我的<a href="http://weibo.com/p/1005052707356725" target="_blank" rel="external">微博</a>。</p>
 
       
 
