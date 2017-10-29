@@ -15,7 +15,7 @@
 <meta property="og:url" content="https://github.com/hz-zuhai/2017/10/27/HelloC++系列之Google编码规范/index.html">
 <meta property="og:site_name" content="Zuhai的博客">
 <meta property="og:description" content="前言 本文面向刚入门学习C++的童鞋，老鸟们可选择性绕路。 在学习新的一门语言时，首先要了解这门语言相关规范，给自己脑子里留下印象。在今后编码过程中不断的实践并加深印象，从而形成一种习惯。 为什么选择Google C++编程规范呢？ 引用李开复先生曾对它的评价：“我认为这是地球上最好的一份C++编程规范,没有之一,建议广大国内外IT研究使用。” 那么接下来我们一起认识它吧！">
-<meta property="og:updated_time" content="2017-10-29T03:57:19.624Z">
+<meta property="og:updated_time" content="2017-10-29T07:55:08.533Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Google C++编程规范(一)">
 <meta name="twitter:description" content="前言 本文面向刚入门学习C++的童鞋，老鸟们可选择性绕路。 在学习新的一门语言时，首先要了解这门语言相关规范，给自己脑子里留下印象。在今后编码过程中不断的实践并加深印象，从而形成一种习惯。 为什么选择Google C++编程规范呢？ 引用李开复先生曾对它的评价：“我认为这是地球上最好的一份C++编程规范,没有之一,建议广大国内外IT研究使用。” 那么接下来我们一起认识它吧！">
@@ -253,9 +253,9 @@
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">bigopen() <span class="comment">//函数名，参考 open() </span></div><div class="line">uint <span class="comment">//typedef 类型定义 </span></div><div class="line">bigpos <span class="comment">//struct 或 class，参考 pos </span></div><div class="line">sparse_hash_map <span class="comment">//STL 相似实体；参考 STL 命名约定</span></div><div class="line">LONGLONG_MAX <span class="comment">//常量，类似 INT_MAX</span></div></pre></td></tr></table></figure>
 </li>
 <li><p>总结</p>
-<p>10.1 总体规则：不要随意缩写，如果说ChangeLocalValue ChangeLocalValue ChangeLocalValue ChangeLocalValue写作 ChgLocVal ChgLocVal ChgLocVal ChgLocVal还有情可 原的话，把ModifyPlayerName ModifyPlayerName ModifyPlayerName ModifyPlayerName写作 MdfPlyNm MdfPlyNm MdfPlyNm MdfPlyNm就太过分了，除函数名可适当为动 词外，其他命名尽量使用清晰易懂的名词；</p>
-<p>10.2 宏、枚举等使用全部大写+ + + +下划线；</p>
-<p>10.3 变量（含类、结构体成员变量）、文件、命名空间、存取函数等使用全部小写+ + + +下划线 ， 类成员变量以下划线结尾，全局变量以g<em> g</em> g<em> g</em>开头；</p>
+<p>10.1 总体规则：不要随意缩写，如果说ChangeLocalValue 写作 ChgLocVal 还有情可 原的话，把 ModifyPlayerName写作 MdfPlyNm就太过分了，除函数名可适当为动 词外，其他命名尽量使用清晰易懂的名词；</p>
+<p>10.2 宏、枚举等使用全部大写+下划线；</p>
+<p>10.3 变量（含类、结构体成员变量）、文件、命名空间、存取函数等使用全部小写+下划线 ， 类成员变量以下划线结尾，全局变量以g_开头；</p>
 <p>10.4 普通函数、类型（含类与结构体、枚举类型）、常量等使用大小写混合，不含下划线；</p>
 <p>10.5 参考现有或相近命名约定。</p>
 </li>
