@@ -142,6 +142,87 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-2017-10-29-C++单例模式" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/10/29/2017-10-29-C++单例模式/">C++单例模式</a>
+    </h1>
+  
+
+        
+        <a href="/2017/10/29/2017-10-29-C++单例模式/" class="archive-article-date">
+  	<time datetime="2017-10-29T08:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-10-29</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>单例（Singleton）模式，也叫单子模式，是一种常用的软件设计模式。在应用这个模式时，单例对象的类必须保证只有一个实例存在。</p>
+<p>下面举例，懒汉模式（用到的时候才实例化）：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//头文件  </span></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Singleton</span>  &#123;</span>  </div><div class="line">    <span class="keyword">public</span>:  </div><div class="line">        <span class="function"><span class="keyword">static</span> Singleton&amp; <span class="title">Instance</span><span class="params">()</span></span>&#123;  <span class="comment">//Instance()作为静态成员函数提供里全局访问点  </span></div><div class="line">            <span class="keyword">if</span>(instance == <span class="literal">NULL</span>)      <span class="comment">//如果还未实例化，即可实例话，反之提供实例的引用  </span></div><div class="line">                instance = <span class="keyword">new</span> Singleton;  </div><div class="line">            <span class="keyword">return</span> *instance;         <span class="comment">//返回指针的话可能会误被 delete，返回引用安全一点  </span></div><div class="line">        &#125;  </div><div class="line">    <span class="keyword">private</span>:  </div><div class="line">        Singleton();          <span class="comment">//这里将构造，析构，拷贝构造，赋值函数设为私有，杜绝了生成新例  </span></div><div class="line">        ~Singleton();  </div><div class="line">        Singleton(<span class="keyword">const</span> Singleton&amp;);  </div><div class="line">        Singleton&amp; <span class="keyword">operator</span>=(<span class="keyword">const</span> Singleton&amp;);  </div><div class="line">  </div><div class="line">        <span class="keyword">static</span> Singleton	*instance;</div><div class="line">&#125;;</div></pre></td></tr></table></figure>
+<p><em>注意</em>  上面的例子并不是线程安全的。所以实例化的过程应放在初始化阶段执行。</p>
+<p>Scott Meyers在《Effective C++》提出一种更优雅的单例模式：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//头文件  </span></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Singleton</span>  &#123;</span>  </div><div class="line">    <span class="keyword">public</span>:  </div><div class="line">        <span class="function"><span class="keyword">static</span> Singleton&amp; <span class="title">Instance</span><span class="params">()</span> </span>&#123;     <span class="comment">//Instance()作为静态成员函数提供里全局访问    </span></div><div class="line">            <span class="keyword">static</span> Singleton instance;  </div><div class="line">            <span class="keyword">return</span> instance;  </div><div class="line">        &#125;  </div><div class="line">  </div><div class="line">    <span class="keyword">private</span>:  </div><div class="line">        Singleton(); </div><div class="line">        ~Singleton();  </div><div class="line">        Singleton(<span class="keyword">const</span> Singleton&amp;);  </div><div class="line">        Singleton&amp; <span class="keyword">operator</span>=(<span class="keyword">const</span> Singleton&amp;);  </div><div class="line">&#125;;</div></pre></td></tr></table></figure>
+<p><strong>注意</strong> 有依赖编辑器执行的标准，C++11之后是线程安全的。</p>
+<hr>
+<p>欢迎关注我的<a href="http://weibo.com/p/1005052707356725" target="_blank" rel="external">微博</a></p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">C/C++</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/10/29/2017-10-29-C++单例模式/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-如何学习C++" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
